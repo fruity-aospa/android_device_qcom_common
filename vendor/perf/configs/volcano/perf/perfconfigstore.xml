@@ -36,6 +36,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="6" />
+                <Prop Name="vendor.perf.expensive_rendering" Value="1" />
                 <Prop Name="ro.vendor.perf.enable.prekill"        Value="true"     />
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="true"/>
                 <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
