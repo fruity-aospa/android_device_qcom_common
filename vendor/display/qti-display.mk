@@ -37,6 +37,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.treat_170m_as_sRGB=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.game_default_frame_rate_override=60
+else ifeq ($(TARGET_BOARD_PLATFORM),volcano)
+# Properties for 5.10+ targets; Nothing's stock vendor keeps this false on
+# volcano — applying the generic flip risks frame pacing regressions.
+PRODUCT_ODM_PROPERTIES += \
+    ro.surface_flinger.clear_slots_with_set_layer_buffer=false
 else
 # Properties for 5.10+ targets
 PRODUCT_ODM_PROPERTIES += \
