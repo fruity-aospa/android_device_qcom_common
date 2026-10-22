@@ -35,7 +35,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.crda.sh \
     init.kernel.init_boot-memory.sh \
-    init.kernel.post_boot-memory.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -48,6 +47,12 @@ PRODUCT_PACKAGES += \
     init.veth_ipa_config.sh \
     qca6234-service.sh \
     ueventd.qcom.rc
+
+# Some device trees carry stock-proven vendor scripts
+ifneq ($(TARGET_INIT_SKIP_VENDOR_SCRIPTS),true)
+PRODUCT_PACKAGES += \
+    init.kernel.post_boot-memory.sh
+endif
 
 # Charger
 ifeq ($(TARGET_USE_HIDL_QTI_HEALTH),true)
@@ -62,9 +67,13 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
-    init.qti.kernel.target.rc \
+    init.qti.kernel.target.rc
+
+ifneq ($(TARGET_INIT_SKIP_VENDOR_SCRIPTS),true)
+PRODUCT_PACKAGES += \
     init.qti.kernel.sh \
     init.qti.write.sh
+endif
 
 # If modules are present, load them.  If not, skip.
 ifneq ($(KERNEL_MODULES_OUT),)
