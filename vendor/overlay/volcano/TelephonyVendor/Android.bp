@@ -1,9 +1,0 @@
-//
-// SPDX-FileCopyrightText: 2025 Paranoid Android
-// SPDX-License-Identifier: Apache-2.0
-//
-
-runtime_resource_overlay {
-    name: "TelephonyResCommon_Vendor_volcano",
-    vendor: true,
-}
