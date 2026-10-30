@@ -29,16 +29,3 @@ PRODUCT_PACKAGES += \
     WifiResTargetMainline_cape \
     WifiResTargetMainline_ukee
 endif
-
-ifeq ($(TARGET_BOARD_PLATFORM),volcano)
-PRODUCT_PACKAGES += \
-    CarrierConfigResCommon_volcano \
-    FrameworksResCommon_volcano \
-    SettingsResCommon_volcano \
-    SystemUIResCommon_volcano \
-    TelephonyResCommon_Sys_volcano \
-    TelephonyResCommon_Vendor_volcano \
-    UwbResCommon_volcano \
-    WifiResCommon_volcano \
-    WifiResCommonMainline_volcano
-endif
