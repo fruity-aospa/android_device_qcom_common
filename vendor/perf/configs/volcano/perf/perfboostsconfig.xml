@@ -168,7 +168,7 @@
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="volcano"
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF" />
+                       0x40800000, 1401, 0x40800100, 1344, 0x40800200, 1651" />
 
     <!--Exit app Animation boost -->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -395,7 +395,7 @@
         <Config
             Id="0x00001089" Enable="true" Timeout="1500" Target="volcano"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000,0xFFF, 0x40800100,0xFFF, 0x40800200,0xFFF" />
+                       0x40800000,1401, 0x40800100,1344, 0x40800200,1651" />
 
     <!--Rotation animation boost-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
