@@ -406,14 +406,6 @@
             Id="0x00001090" Enable="true" Timeout="1000" Target="volcano"
             Resources="0x40800100, 1344, 0x42804000, 0" />
 
-    <!--Expensive rendering boost-->
-        <!-- GPU_MIN_POWER_LEVEL resource opcode, value-->
-        <!-- Held by the power HAL while SurfaceFlinger composites background blur -->
-
-        <Config
-            Id="0x000010A5" Enable="true" Timeout="0" Target="volcano"
-            Resources="0x42804000, 0" />
-
     <!--Performance mode-->
         <!-- UCLAMP_BOOST -->
         <!-- SCHED_WINDOW_TICKS_UPDATE -->
