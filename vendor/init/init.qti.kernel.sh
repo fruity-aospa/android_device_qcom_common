@@ -31,10 +31,5 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-start_msm_irqbalance()
-{
-         if [ -f /vendor/bin/msm_irqbalance ] && [ -f /vendor/etc/msm_irqbalance.conf ]; then
-                start vendor.msm_irqbalance
-         fi
-}
-start_msm_irqbalance
+# Legacy msm_irqbalance removed
+exit 0
