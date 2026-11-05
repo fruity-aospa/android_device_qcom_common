@@ -37,8 +37,15 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=3.0 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.perf.scroll_opt=true \
-    ro.vendor.qspm.enable=true \
     vendor.perf.framepacing.enable=1
+
+ifeq ($(TARGET_BOARD_PLATFORM),volcano)
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.qspm.enable=false
+else
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.qspm.enable=true
+endif
 
 ifeq (,$(filter 4.14, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
