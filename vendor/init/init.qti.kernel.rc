@@ -176,7 +176,7 @@ on property:vendor.pasr.enabled=false
 on charger
     start kernel-post-boot
 
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root

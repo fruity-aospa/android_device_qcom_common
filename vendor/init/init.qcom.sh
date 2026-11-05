@@ -134,7 +134,7 @@ start_msm_irqbalance660()
 
 start_msm_irqbalance()
 {
-	if [ -f /vendor/bin/msm_irqbalance ]; then
+	if [ -f /vendor/bin/msm_irqbalance ] && [ -f /vendor/etc/msm_irqbalance.conf ]; then
 			start vendor.msm_irqbalance
 	fi
 }
