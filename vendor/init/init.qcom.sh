@@ -80,41 +80,6 @@ start_vm_bms()
 	fi
 }
 
-start_msm_irqbalance_8939()
-{
-	return 0
-}
-
-start_msm_irqbalance_msmnile()
-{
-	return 0
-}
-
-start_msm_irqbalance_kona()
-{
-	return 0
-}
-
-start_msm_irqbalance_lito()
-{
-	return 0
-}
-
-start_msm_irqbalance_atoll()
-{
-	return 0
-}
-
-start_msm_irqbalance660()
-{
-	return 0
-}
-
-start_msm_irqbalance()
-{
-	return 0
-}
-
 baseband=`getprop ro.baseband`
 echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
 
@@ -211,7 +176,6 @@ case "$target" in
                   esac
                   ;;
        esac
-        start_msm_irqbalance660
         ;;
     "apq8084")
         platformvalue=`cat /sys/devices/soc0/hw_platform`
@@ -230,7 +194,6 @@ case "$target" in
         ;;
     "msm8916")
         start_vm_bms
-        start_msm_irqbalance_8939
         if [ -f /sys/devices/soc0/soc_id ]; then
             soc_id=`cat /sys/devices/soc0/soc_id`
         else
@@ -265,7 +228,6 @@ case "$target" in
         esac
         ;;
     "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "sm6150" | "trinket" | "bengal")
-        start_msm_irqbalance
         ;;
     "msm8996")
         if [ -f /sys/devices/soc0/hw_platform ]; then
@@ -292,19 +254,14 @@ case "$target" in
         start_vm_bms
         ;;
     "msmnile")
-        start_msm_irqbalance_msmnile
         ;;
     "kona")
-        start_msm_irqbalance_kona
         ;;
     "lito")
-        start_msm_irqbalance_lito
         ;;
     "atoll")
-        start_msm_irqbalance_atoll
         ;;
     "msm8937")
-        start_msm_irqbalance_8939
         if [ -f /sys/devices/soc0/soc_id ]; then
             soc_id=`cat /sys/devices/soc0/soc_id`
         else
@@ -338,7 +295,6 @@ case "$target" in
         fi
         ;;
     "msm8953")
-	start_msm_irqbalance_8939
         if [ -f /sys/devices/soc0/soc_id ]; then
             soc_id=`cat /sys/devices/soc0/soc_id`
         else
