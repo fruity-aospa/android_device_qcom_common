@@ -35,4 +35,10 @@ endif
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, device/qcom/common/vendor/adreno/$(TARGET_ADRENO_DIR)/qti-adreno.mk)
+#
+# Some device blob trees (e.g. Nothing asteroids) carry the full GPU driver
+# set from the device's own extraction. Honor an opt-out so both sources
+# don't end up defining the same modules.
+ifneq ($(TARGET_ADRENO_SKIP_VENDOR_BLOBS),true)
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/adreno/$(TARGET_ADRENO_DIR)/adreno-vendor.mk)
+endif
